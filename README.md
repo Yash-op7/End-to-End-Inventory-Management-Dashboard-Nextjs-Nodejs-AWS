@@ -16,4 +16,5 @@
 - In the app directory
     - page.tsx - this is where our first page is shown
     - layout.tsx - is where the root exists
-    - 
+    - when we configured the nextJS project in the beginning we defined '@' in the path to indicate the src dir, so we can write for example, '@/app/dashboard/page' to the Dashboard component
+    - to create the skelaton/boilerplate code for a new comonent in a page.tsx write `tsrafce` and enter

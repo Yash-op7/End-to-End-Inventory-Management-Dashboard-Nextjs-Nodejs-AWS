@@ -10,6 +10,7 @@
 - inside the client run the following to install the necessary libraries:
     - `npm i @mui/x-data-grid @mui/material @emotion/react @emotion/styled lucide-react numeral recharts uuid axios`
     - `npm i -D @types/node @types/uuid @types/numeral` - these are types necessary for Typescript
+    - `npm i -D tw-colors` for setting up dark mode
 
 ### Notes
 - In the app directory

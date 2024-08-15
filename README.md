@@ -21,3 +21,6 @@
     - In the final layout the sidebar and the navbar are always present on any page/route so we set them up in the `layout.tsx`
     - `md:pl-24` - a media breakpoint in tailwind css, so that whenever we cross the medium width it sets padding left to 24px
     - import Navbar from "@/app/(components)/Navbar" - so that nextjs doesn't register it as a url
+    - `<div className="hidden md:flex justify-between items-center gap-5">` the styles here have the following meaning:
+        - by default set display:none property
+        - when the screen size is medium or larger set the display:flex property

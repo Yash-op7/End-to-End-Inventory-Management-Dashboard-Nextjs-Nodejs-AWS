@@ -95,3 +95,6 @@ export default function StoreProvider({
     </Provider>
   );
 }
+
+
+// majority of this code is taken from the documentation to setup redux for any next js application

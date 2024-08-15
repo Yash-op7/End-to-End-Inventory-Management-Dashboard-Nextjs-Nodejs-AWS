@@ -19,3 +19,5 @@
     - when we configured the nextJS project in the beginning we defined '@' in the path to indicate the src dir, so we can write for example, '@/app/dashboard/page' to the Dashboard component
     - to create the skelaton/boilerplate code for a new comonent in a page.tsx write `tsrafce` and enter
     - In the final layout the sidebar and the navbar are always present on any page/route so we set them up in the `layout.tsx`
+    - `md:pl-24` - a media breakpoint in tailwind css, so that whenever we cross the medium width it sets padding left to 24px
+    - import Navbar from "@/app/(components)/Navbar" - so that nextjs doesn't register it as a url

@@ -10,3 +10,9 @@
 - inside the client run the following to install the necessary libraries:
     - `npm i @mui/x-data-grid @mui/material @emotion/react @emotion/styled lucide-react numeral recharts uuid axios`
     - `npm i -D @types/node @types/uuid @types/numeral` - these are types necessary for Typescript
+
+### Notes
+- In the app directory
+    - page.tsx - this is where our first page is shown
+    - layout.tsx - is where the root exists
+    - 

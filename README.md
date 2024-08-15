@@ -11,6 +11,7 @@
     - `npm i @mui/x-data-grid @mui/material @emotion/react @emotion/styled lucide-react numeral recharts uuid axios`
     - `npm i -D @types/node @types/uuid @types/numeral` - these are types necessary for Typescript
     - `npm i -D tw-colors` for setting up dark mode
+    - `npm i react-redux @reduxjs/toolkit dotenv` - redux toolkit is just for reducing the boilter plate code of redux
 
 ### Notes
 - In the app directory
@@ -24,3 +25,4 @@
     - `<div className="hidden md:flex justify-between items-center gap-5">` the styles here have the following meaning:
         - by default set display:none property
         - when the screen size is medium or larger set the display:flex property
+    

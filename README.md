@@ -97,4 +97,12 @@ app.get('/hello', (req, res) => {
         - install git to upload our code to github and pull that git hub repo on to this ec2 instance.
         - install pm2 so that our app is always running even when we log off
     - see the installation instructions here: https://github.com/ed-roh/inventory-management/blob/master/server/aws-ec2-instructions.md
-    
+    - once pulled the code in ec2:
+        - cd server
+        - npm i
+        - echo "PORT=80" > .env
+    - yay
+- step 6: Install pm2 (Production Process Manager for Node.js)
+    - next, when the ec2 instance fails we dont want the npm run dev command to stop and never run again on its own, so we need to install something called `pm`, which, lets say you run a node server process in production and it basically has a restart strategy, so it has a lot of nice monitoring processes as well, it can run in clusters so on.
+- step steup rds
+- step 10: host the frontend on aws amplify

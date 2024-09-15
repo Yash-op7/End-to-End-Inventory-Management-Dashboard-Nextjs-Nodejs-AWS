@@ -60,3 +60,21 @@ app.get('/hello', (req, res) => {
 })
 ```
 -> curl http://localhost:8000/hello -> hellow world
+
+# AWS
+- step 1: create a vpc:
+    - let everything else as default, and choose 10.0.0.0/16 CIDR block
+    - we'll place our services in this ip range, each service will have a range that we'll need
+    - subnets will provide a range of ip in which services can be deployedkk
+- step 2: create subnets:
+    - we cannot deploy anything in our vpcs without subnets
+    - subnets are just a set of ip addressses.
+    - we need: a public subnet and a private subnet
+    - public subnet:
+        - availibility zone: ap-south-1a
+        - cidr block: 10.0.1.0/24 - 256 addresses
+    - private subnet:
+        - ap-south-1b
+        - 10.0.2.0/24
+- step 3: internet gateway to provide access to public subnet, for a user client to access your vpc you need an internet gateway
+- step 4: we need to attach route tables to the public and private subnets

@@ -38,9 +38,10 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+// this is the unique thing about connecting a nextjs app to redux, you have to wrap it like so
 const DashboardWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
-    <StoreProvider>
+    <StoreProvider>   
       <DashboardLayout>{children}</DashboardLayout>
     </StoreProvider>
   );

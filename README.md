@@ -26,3 +26,4 @@
         - by default set display:none property
         - when the screen size is medium or larger set the display:flex property
     
+= redux.tsx - taken from documentation, boilerplate

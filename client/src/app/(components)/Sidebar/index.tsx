@@ -24,6 +24,7 @@ interface SidebarLinkProps {
   isCollapsed: boolean;
 }
 
+// each link in the sidebar, checking if the current page corresponds to this link to highlight it
 const SidebarLink = ({
   href,
   icon: Icon,

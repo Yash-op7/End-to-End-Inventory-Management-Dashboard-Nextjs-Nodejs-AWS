@@ -78,3 +78,23 @@ app.get('/hello', (req, res) => {
         - 10.0.2.0/24
 - step 3: internet gateway to provide access to public subnet, for a user client to access your vpc you need an internet gateway
 - step 4: we need to attach route tables to the public and private subnets
+    - basically route tables define what routes connect to what locations in the vpc
+    - these route tables define what access is provided.
+    - so the public route table needs access to the internet gateway
+    - and the private route table needs to have access to the public subnet
+    - create the route tables
+    - associate the route tables to their respective subnet
+    - for the public route table, edit routes and add a new route with dest: 0.0.0.0/0, so it has access to everything outside vpc as well
+    - private route table remains the same, with only default local route
+- step 5: ec2 for backend
+    - launch instance
+    - security groups: security access rules for the resource, basically finer version of access control lists which exist for subnets, by default the security group doesn't give any access to the resource.
+    - so check the two check boxes for allowing http and https traffic from the internet
+    - set up the correct subnet and security group name and desc
+    - launch instance, wait for it to be live then attempt to connect
+    - in a new tab you'll get a connected terminal window, here we'll install our dependencies for our codebase:
+        - install node using nvm
+        - install git to upload our code to github and pull that git hub repo on to this ec2 instance.
+        - install pm2 so that our app is always running even when we log off
+    - see the installation instructions here: https://github.com/ed-roh/inventory-management/blob/master/server/aws-ec2-instructions.md
+    

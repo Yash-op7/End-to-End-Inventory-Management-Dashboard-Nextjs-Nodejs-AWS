@@ -27,3 +27,36 @@
         - when the screen size is medium or larger set the display:flex property
     
 = redux.tsx - taken from documentation, boilerplate
+
+# backend - express and node, postgres and prisma
+- mkdir server; cd server; npm init -y;
+- first install postgresql and pgadmin 4 locally to test postgresql code (afterwards we'll use aws rds)
+- local pg user: postgres and password is root.
+- inside server:
+    - `npm i prisma @prisma/client`
+    - `npx prisma init`
+    -  `npm i typescript`
+    - `npx tsc --init`
+    - `npm i -D ts-node typescript @types/node`
+    - write the schema.prisma
+    - write the seed.ts
+    - run:
+        - `npx prisma generate`
+        - `npx prisma migrate dev --name init` 
+- npm i:
+    - express
+    - body-parser: to parse our requests into json
+    - cors - for cors issues
+    - helmet - for securing our apis
+    - dotenv - for env vars
+    - morgan
+    - concurrently: to run different variations of our dev server
+    - rimraf: to help us run our package to build our typescript file when we want to run our ts server.
+
+- set up package.json
+- ```js
+app.get('/hello', (req, res) => {
+    res.send('hello world');
+})
+```
+-> curl http://localhost:8000/hello -> hellow world

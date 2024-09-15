@@ -26,7 +26,7 @@ app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.use((0, cors_1.default)());
 /* ROUTES */
 app.get('/hello', (req, res) => {
-    res.send('hello world');
+    res.send('hello world2');
 });
 // app.use("/dashboard", dashboardRoutes); // http://localhost:8000/dashboard
 // app.use("/products", productRoutes); // http://localhost:8000/products

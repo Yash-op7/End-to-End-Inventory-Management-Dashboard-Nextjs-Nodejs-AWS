@@ -61,9 +61,10 @@ export const api = createApi({
   reducerPath: "api",
   tagTypes: ["DashboardMetrics", "Products", "Users", "Expenses"],
   endpoints: (build) => ({
+    // name: build.query<returnType, sendType (void since its a get req)>
     getDashboardMetrics: build.query<DashboardMetrics, void>({
-      query: () => "/dashboard",
-      providesTags: ["DashboardMetrics"],
+      query: () => "/dashboard",    // gets appended to the base url
+      providesTags: ["DashboardMetrics"], // this is the tag where the fetched data is saved
     }),
     getProducts: build.query<Product[], string | void>({
       query: (search) => ({
